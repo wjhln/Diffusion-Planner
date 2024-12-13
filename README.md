@@ -9,15 +9,13 @@
 
 The official implementation of **Diffusion Planner**, which **represents a pioneering effort in fully harnessing the power of diffusion models for high-performance motion planning, without overly relying on refinement**.
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 1%;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 2%;">
 
-  <img src="https://cloud.tsinghua.edu.cn/f/f829237ae715475e9441/?dl=1" width="23.5%" alt="Video 1">
+  <img src="https://cloud.tsinghua.edu.cn/f/f829237ae715475e9441/?dl=1" width="32%" alt="Video 1">
 
-  <img src="https://cloud.tsinghua.edu.cn/f/890f8a8abc3d4855af95/?dl=1" width="23.5%" alt="Video 2">
+  <img src="https://cloud.tsinghua.edu.cn/f/5d24e1a792d04854af9e/?dl=1" width="32%" alt="Video 2">
 
-  <img src="https://cloud.tsinghua.edu.cn/f/5d24e1a792d04854af9e/?dl=1" width="23.5%" alt="Video 3">
-
-  <img src="https://cloud.tsinghua.edu.cn/f/5b66086b2ca445d3b5f4/?dl=1" width="23.5%" alt="Video 4">
+  <img src="https://cloud.tsinghua.edu.cn/f/5b66086b2ca445d3b5f4/?dl=1" width="32%" alt="Video 3">
 
 </div>
 
