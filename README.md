@@ -11,27 +11,16 @@ The official implementation of **Diffusion Planner**, which **represents a pione
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 1%;">
 
-  <video width="23.5%" controls loop autoplay muted>
-    <source src="https://cloud.tsinghua.edu.cn/f/7207ba132fb543c0a0e9/?dl=1" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <img src="https://cloud.tsinghua.edu.cn/f/f829237ae715475e9441/?dl=1" width="23.5%" alt="Video 1">
 
-  <video width="23.5%" controls loop autoplay muted>
-    <source src="https://cloud.tsinghua.edu.cn/f/051d3f00eb444b5aa357/?dl=1" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <img src="https://cloud.tsinghua.edu.cn/f/890f8a8abc3d4855af95/?dl=1" width="23.5%" alt="Video 2">
 
-  <video width="23.5%" controls loop autoplay muted>
-    <source src="https://cloud.tsinghua.edu.cn/f/5d3cfcb234514bb6b86d/?dl=1" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <img src="https://cloud.tsinghua.edu.cn/f/5d24e1a792d04854af9e/?dl=1" width="23.5%" alt="Video 3">
 
-  <video width="23.5%" controls loop autoplay muted>
-    <source src="https://cloud.tsinghua.edu.cn/f/f992a7844a294d19b5db/?dl=1" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <img src="https://cloud.tsinghua.edu.cn/f/5b66086b2ca445d3b5f4/?dl=1" width="23.5%" alt="Video 4">
 
 </div>
+
 
 ## Table of Contents
 
