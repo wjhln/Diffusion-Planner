@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://cloud.tsinghua.edu.cn/f/15fb49b6863849e2830a/?dl=1" width=100%>
+<img src="https://cloud.tsinghua.edu.cn/f/3bb3e445a3ce4dc8baa1/?dl=1" width=100% style="vertical-align: bottom;">
 <h3>Diffusion-Based Planning for Autonomous Driving with Flexible Guidance</h3>
 
 [Yinan Zheng](https://github.com/ZhengYinan-AIR)\*, Ruiming Liang\*, Kexin Zheng\*, [Jinliang Zheng](https://github.com/2toinf), Liyuan Mao, [Jianxiong Li](https://facebear-ljx.github.io/), Weihao Gu, Rui Ai, [Shengbo Eben Li](https://scholar.google.com/citations?user=Dxiw1K8AAAAJ&hl=zh-CN), [Xianyuan Zhan](https://zhanzxy5.github.io/zhanxianyuan/), [Jingjing Liu](https://air.tsinghua.edu.cn/en/info/1046/1194.htm)
@@ -89,7 +89,8 @@ The official implementation of **Diffusion Planner**, which **represents a pione
 
 <image src="https://cloud.tsinghua.edu.cn/f/01e54aa90ab44c48b49d/?dl=1" width=100%>
 
-<p><strong>Future trajectory generation visualization</strong>. A frame from a challenging narrow road turning scenario in the closed-loop test, including the <span style="color:#2FA8DF;">future planning</span> of the ego vehicle (<em>PlanTF</em> and <em>PLUTO w/o refine.</em> showing multiple <span style="color:#A5ACB1;">candidate trajectories</span>), <span style="color:#60B083;">predictions</span> for neighboring vehicles, and the <span style="color:#6472EC;">ground truth</span> ego trajectory.</p>
+**Future trajectory generation visualization**. A frame from a challenging narrow road turning scenario in the closed-loop test, including the **future planning** of the ego vehicle (*PlanTF* and *PLUTO w/o refine.* showing multiple **candidate trajectories**), **predictions** for neighboring vehicles, and the **ground truth** ego trajectory.
+
 
 ## Acknowledgement
 Diffusion Planner is greatly inspired by the following outstanding contributions to the open-source community: [nuplan-devkit](https://github.com/motional/nuplan-devkit), [GameFormer-Planner](https://github.com/MCZhi/GameFormer-Planner), [tuplan_garage](https://github.com/autonomousvision/tuplan_garage), [planTF](https://github.com/jchengai/planTF), [pluto](https://github.com/jchengai/pluto), [StateTransformer](https://github.com/Tsinghua-MARS-Lab/StateTransformer), [DiT](https://github.com/facebookresearch/DiT), [dpm-solver](https://github.com/LuChengTHU/dpm-solver)
