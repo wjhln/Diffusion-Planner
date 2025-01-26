@@ -54,7 +54,7 @@ The official implementation of **Diffusion Planner**, which **represents a pione
 | PLUTO w/o refine.*                 | 88.89      | 78.11       | 70.03            | 59.74             | **89.90**   | 78.62        |
 | Diffusion-es w/o LLM               | 50.00      | -           | -                | -                 | -           | -            |
 | STR2-CPKS-800M w/o refine.*        | 8.80       | -           | 10.99            | -                 | -           | -            |
-| Diffusion Planner (ours)           | **89.76**  | **82.56**   | **75.67**        | **68.56**         | **89.22**   | **83.36**    |
+| Diffusion Planner (ours)           | **89.87**  | **82.80**   | **75.99**        | **69.22**         | **89.19**   | **82.93**    |
 
 *: Using pre-searched reference lines or additional proposals as model inputs provides prior knowledge.
 
