@@ -5,8 +5,7 @@
 [Yinan Zheng](https://github.com/ZhengYinan-AIR)\*, Ruiming Liang\*, Kexin Zheng\*, [Jinliang Zheng](https://github.com/2toinf), Liyuan Mao, [Jianxiong Li](https://facebear-ljx.github.io/), Weihao Gu, Rui Ai, [Shengbo Eben Li](https://scholar.google.com/citations?user=Dxiw1K8AAAAJ&hl=zh-CN), [Xianyuan Zhan](https://zhanzxy5.github.io/zhanxianyuan/), [Jingjing Liu](https://air.tsinghua.edu.cn/en/info/1046/1194.htm)
 
 
-[**[Project Page]**](https://zhengyinan-air.github.io/Diffusion-Planner/) [**[Openreview]**](https://openreview.net/forum?id=wM2sfVgMDH)
-
+[**[Arxiv]**](https://arxiv.org/pdf/2501.15564) [**[Project Page]**](https://zhengyinan-air.github.io/Diffusion-Planner/)
 International Conference on Learning Representation (ICLR), 2025
 </div>
 
