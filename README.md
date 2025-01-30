@@ -6,6 +6,7 @@
 
 
 [**[Arxiv]**](https://arxiv.org/pdf/2501.15564) [**[Project Page]**](https://zhengyinan-air.github.io/Diffusion-Planner/)
+
 International Conference on Learning Representation (ICLR), 2025
 </div>
 
