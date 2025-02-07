@@ -45,6 +45,8 @@ The official implementation of **Diffusion Planner**, which **represents a pione
 ## Closed-loop Performance on nuPlan
 ### Learning-based Methods
 
+**The results of STR2-CPKS-800M without refinement are currently being confirmed with the authors' team. Please wait for the subsequent double-check results from both sides.**
+
 | Methods                            | Val14 (NR) | Val14 \(R\) | Test14-hard (NR) | Test14-hard \(R\) | Test14 (NR) | Test14 \(R\) |
 | ---------------------------------- | ---------- | ----------- | ---------------- | ----------------- | ----------- | ------------ |
 | PDM-Open*                          | 53.53      | 54.24       | 33.51            | 35.83             | 52.81       | 57.23        |
