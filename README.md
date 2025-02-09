@@ -2,7 +2,7 @@
 <img src="./assets/img/diffusion_planner.png" width=100% style="vertical-align: bottom;">
 <h3>Diffusion-Based Planning for Autonomous Driving with Flexible Guidance</h3>
 
-[Yinan Zheng](https://github.com/ZhengYinan-AIR)\*, Ruiming Liang\*, Kexin Zheng\*, [Jinliang Zheng](https://github.com/2toinf), Liyuan Mao, [Jianxiong Li](https://facebear-ljx.github.io/), Weihao Gu, Rui Ai, [Shengbo Eben Li](https://scholar.google.com/citations?user=Dxiw1K8AAAAJ&hl=zh-CN), [Xianyuan Zhan](https://zhanzxy5.github.io/zhanxianyuan/), [Jingjing Liu](https://air.tsinghua.edu.cn/en/info/1046/1194.htm)
+[Yinan Zheng](https://github.com/ZhengYinan-AIR)\*, [Ruiming Liang](https://github.com/LRMbbj)\*, Kexin Zheng\*, [Jinliang Zheng](https://github.com/2toinf), Liyuan Mao, [Jianxiong Li](https://facebear-ljx.github.io/), Weihao Gu, Rui Ai, [Shengbo Eben Li](https://scholar.google.com/citations?user=Dxiw1K8AAAAJ&hl=zh-CN), [Xianyuan Zhan](https://zhanzxy5.github.io/zhanxianyuan/), [Jingjing Liu](https://air.tsinghua.edu.cn/en/info/1046/1194.htm)
 
 
 [**[Arxiv]**](https://arxiv.org/pdf/2501.15564) [**[Project Page]**](https://zhengyinan-air.github.io/Diffusion-Planner/)
@@ -45,7 +45,6 @@ The official implementation of **Diffusion Planner**, which **represents a pione
 ## Closed-loop Performance on nuPlan
 ### Learning-based Methods
 
-**The results of STR2-CPKS-800M without refinement are currently being confirmed with the authors' team. Please wait for the subsequent double-check results from both sides.**
 
 | Methods                            | Val14 (NR) | Val14 \(R\) | Test14-hard (NR) | Test14-hard \(R\) | Test14 (NR) | Test14 \(R\) |
 | ---------------------------------- | ---------- | ----------- | ---------------- | ----------------- | ----------- | ------------ |
@@ -55,7 +54,7 @@ The official implementation of **Diffusion Planner**, which **represents a pione
 | PlanTF                             | 84.72      | 76.95       | 69.70            | 61.61             | 85.62       | 79.58        |
 | PLUTO w/o refine.*                 | 88.89      | 78.11       | 70.03            | 59.74             | **89.90**   | 78.62        |
 | Diffusion-es w/o LLM               | 50.00      | -           | -                | -                 | -           | -            |
-| STR2-CPKS-800M w/o refine.*        | 8.80       | -           | 10.99            | -                 | -           | -            |
+| STR2-CPKS-800M w/o refine.*        | 65.16      | -           | 52.57            | -                 | 68.74       | -            |
 | Diffusion Planner (ours)           | **89.87**  | **82.80**   | **75.99**        | **69.22**         | **89.19**   | **82.93**    |
 
 *: Using pre-searched reference lines or additional proposals as model inputs provides prior knowledge.
