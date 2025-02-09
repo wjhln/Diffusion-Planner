@@ -124,9 +124,9 @@ bash sim_diffusion_planner_runner.sh
 If you find our code and paper can help, please cite our paper as:
 ```
 @inproceedings{
-zheng2025diffusion,
+zheng2025diffusionbased,
 title={Diffusion-Based Planning for Autonomous Driving with Flexible Guidance},
-author={Yinan Zheng and Ruiming Liang and Kexin Zheng and Jinliang Zheng and Liyuan Mao and Jianxiong Li and Weihao Gu and Rui Ai and Shengbo Eben Li and Xianyuan Zhan and Jingjing Liu},
+author={Yinan Zheng and Ruiming Liang and Kexin ZHENG and Jinliang Zheng and Liyuan Mao and Jianxiong Li and Weihao Gu and Rui Ai and Shengbo Eben Li and Xianyuan Zhan and Jingjing Liu},
 booktitle={The Thirteenth International Conference on Learning Representations},
 year={2025},
 url={https://openreview.net/forum?id=wM2sfVgMDH}
