@@ -8,6 +8,8 @@
 [**[Arxiv]**](https://arxiv.org/pdf/2501.15564) [**[Project Page]**](https://zhengyinan-air.github.io/Diffusion-Planner/)
 
 International Conference on Learning Representation (ICLR), 2025
+
+🌟 **Oral Presentation (Notable-top-2%)**
 </div>
 
 The official implementation of **Diffusion Planner**, which **represents a pioneering effort in fully harnessing the power of diffusion models for high-performance motion planning, without overly relying on refinement**.
