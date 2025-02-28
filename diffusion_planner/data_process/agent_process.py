@@ -185,6 +185,22 @@ def _pad_agent_states(agent_trajectories, reverse: bool):
     return agent_trajectories
 
 
+def _pad_agent_states_with_zeros(agent_trajectories):
+    key_frame = agent_trajectories[0]
+    track_id_idx = AgentInternalIndex.track_token()
+
+    pad_agent_trajectories = np.zeros((len(agent_trajectories), key_frame.shape[0], key_frame.shape[1]), dtype=np.float32)
+    for idx in range(len(agent_trajectories)):
+        frame = agent_trajectories[idx]
+        mapped_rows = frame[:, track_id_idx]
+
+        for row_idx in range(key_frame.shape[0]):
+            if row_idx in mapped_rows:
+                pad_agent_trajectories[idx, row_idx] = frame[frame[:, track_id_idx]==row_idx]
+
+    return pad_agent_trajectories
+
+
 def agent_past_process(past_ego_states, past_tracked_objects, tracked_objects_types, num_agents, static_objects, static_objects_types, num_static, max_ped_bike, anchor_ego_state):
     """
     This function process the data from the raw agent data.
@@ -316,3 +332,20 @@ def agent_past_process(past_ego_states, past_tracked_objects, tracked_objects_ty
         ego = ego.astype(np.float32)
 
     return ego, agents, selected_indices, static_objects
+
+
+def agent_future_process(anchor_ego_state, future_tracked_objects, num_agents, agent_index):
+    
+    agent_future = _filter_agents_array(future_tracked_objects)
+    local_coords_agent_states = []
+    for agent_state in agent_future:
+        local_coords_agent_states.append(convert_absolute_quantities_to_relative(agent_state, anchor_ego_state, 'agent'))
+    padded_agent_states = _pad_agent_states_with_zeros(local_coords_agent_states)
+
+    # fill agent features into the array
+    agent_futures = np.zeros(shape=(num_agents, padded_agent_states.shape[0]-1, 3), dtype=np.float32)
+    for i, j in enumerate(agent_index):
+        agent_futures[i] = padded_agent_states[1:, j, [AgentInternalIndex.x(), AgentInternalIndex.y(), AgentInternalIndex.heading()]]
+
+    return agent_futures
+
