@@ -24,6 +24,18 @@ The official implementation of **Diffusion Planner**, which **represents a pione
 
 </div>
 
+## To Do List
+
+The code is under cleaning and will be released gradually.
+
+- [ ] e2e & real world vehicle
+- [ ] delivery vehicle dataset (government approval in progress)
+- [ ] guidance tutorial
+- [ ] data preprocess
+- [x] training code
+- [x] diffusion planner & checkpoint
+- [x] initial repo & paper
+
 
 ## Table of Contents
 
@@ -33,6 +45,8 @@ The official implementation of **Diffusion Planner**, which **represents a pione
    - [Rule-based / Hybrid Methods](#rule-based-hybrid-methods)
    - [Qualitative Results](#qualitative-results)
 - [Getting Started](#getting-started)
+  - [Closed-loop Evaluation](#closed-loop-evaluation)
+  - [Training](#training)
 
 
 ## Methods
@@ -105,6 +119,8 @@ git clone https://github.com/ZhengYinan-AIR/Diffusion-Planner.git && cd Diffusio
 pip install -e .
 pip install -r requirements_torch.txt
 ```
+
+### Closed-loop Evaluation
 - Download the model checkpoint from [Huggingface](https://huggingface.co/ZhengYinan2001/Diffusion-Planner) repository. Download, two files under `checkpoints` directory. 
 ```bash
 mkdir -p checkpoints
@@ -120,6 +136,12 @@ bash sim_diffusion_planner_runner.sh
 - Visualize the results
 1. Set up configuration in run_nuboard.ipynb.
 2. Launch Jupyter Notebook or JupyterLab to execute run_nuboard.ipynb.
+
+### Training
+```bash
+chmod +x torch_run.sh
+./torch_run.sh
+```
 
 ## Bibtex
 
