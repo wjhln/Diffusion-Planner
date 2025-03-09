@@ -45,7 +45,7 @@ def get_args():
     parser.add_argument('--agent_num', type=int, help='number of agents', default=32)
 
     parser.add_argument('--static_objects_state_dim', type=int, help='state dim for static objects', default=10)
-    parser.add_argument('--static_objects_num', type=int, help='number of agents', default=5)
+    parser.add_argument('--static_objects_num', type=int, help='number of static objects', default=5)
 
     parser.add_argument('--lane_len', type=int, help='number of lane point', default=20)
     parser.add_argument('--lane_state_dim', type=int, help='state dim for lane point', default=12)

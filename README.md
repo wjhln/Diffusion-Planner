@@ -31,7 +31,7 @@ The code is under cleaning and will be released gradually.
 - [ ] e2e & real world vehicle
 - [ ] delivery vehicle dataset (government approval in progress)
 - [ ] guidance tutorial
-- [ ] data preprocess
+- [x] data preprocess
 - [x] training code
 - [x] diffusion planner & checkpoint
 - [x] initial repo & paper

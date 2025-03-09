@@ -16,9 +16,9 @@ from diffusion_planner.data_process.utils import convert_to_model_inputs
 
 
 class DataProcessor(object):
-    def __init__(self, config, save_dir=None):
+    def __init__(self, config):
 
-        self._save_dir = save_dir
+        self._save_dir = getattr(config, "save_path", None) 
 
         self.past_time_horizon = 2 # [seconds]
         self.num_past_poses = 10 * self.past_time_horizon 
@@ -140,8 +140,8 @@ class DataProcessor(object):
             ]
 
             sampled_future_observations = [present_tracked_objects] + future_tracked_objects
-            future_tracked_objects_tensor_list, _ = sampled_tracked_objects_to_array_list(sampled_future_observations)
-            neighbor_agents_future = agent_future_process(anchor_ego_state, future_tracked_objects_tensor_list, self.num_agents, neighbor_indices)
+            future_tracked_objects_array_list, _ = sampled_tracked_objects_to_array_list(sampled_future_observations)
+            neighbor_agents_future = agent_future_process(anchor_ego_state, future_tracked_objects_array_list, self.num_agents, neighbor_indices)
 
 
             '''
