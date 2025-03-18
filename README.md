@@ -138,6 +138,12 @@ bash sim_diffusion_planner_runner.sh
 2. Launch Jupyter Notebook or JupyterLab to execute run_nuboard.ipynb.
 
 ### Training
+- Preprocess the training data
+```bash
+chmod +x data_process.sh
+./data_process.sh
+```
+- Run the training code
 ```bash
 chmod +x torch_run.sh
 ./torch_run.sh

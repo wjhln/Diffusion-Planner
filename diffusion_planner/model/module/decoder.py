@@ -51,7 +51,7 @@ class Decoder(nn.Module):
             inputs: Dict
                 {
                     ...
-                    "ego_agent_past": past and current ego states,            
+                    "ego_current_state": current ego states,            
                     "neighbor_agent_past": past and current neighbor states,  
 
                     [training-only] "sampled_trajectories": sampled current-future ego & neighbor states,        [B, P, 1 + V_future, 4]

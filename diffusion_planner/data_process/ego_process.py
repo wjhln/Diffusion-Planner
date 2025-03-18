@@ -87,13 +87,6 @@ def calculate_additional_ego_states(ego_agent_past, time_stamp):
         steering_angle = np.clip(steering_angle, -2 / 3 * np.pi, 2 / 3 * np.pi)
         yaw_rate = np.clip(yaw_rate, -0.95, 0.95)
 
-    past = np.zeros((ego_agent_past.shape[0], ego_agent_past.shape[1] + 1), dtype=np.float32)
-
-    past[:, :2] = ego_agent_past[:, :2]
-    past[:, 2] = np.cos(ego_agent_past[:, 2])
-    past[:, 3] = np.sin(ego_agent_past[:, 2])
-    past[:, 4:] = ego_agent_past[:, 3:]
-
     current = np.zeros((ego_agent_past.shape[1] + 3), dtype=np.float32)
     current[:2] = current_state[:2]
     current[2] = np.cos(current_state[2])
@@ -102,4 +95,4 @@ def calculate_additional_ego_states(ego_agent_past, time_stamp):
     current[8] = steering_angle
     current[9] = yaw_rate
 
-    return past, current
+    return current

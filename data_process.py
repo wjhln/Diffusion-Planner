@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     parser.add_argument('--save_path', default='./cache', type=str, help='path to save processed data')
     parser.add_argument('--scenarios_per_type', type=int, default=None, help='number of scenarios per type')
-    parser.add_argument('--total_scenarios', default=10, help='limit total number of scenarios')
+    parser.add_argument('--total_scenarios', type=int, default=10, help='limit total number of scenarios')
     parser.add_argument('--shuffle_scenarios', type=bool, default=True, help='shuffle scenarios')
 
     parser.add_argument('--agent_num', type=int, help='number of agents', default=32)

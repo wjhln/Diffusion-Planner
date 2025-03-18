@@ -69,7 +69,7 @@ class DataProcessor(object):
 
         
         data = {"neighbor_agents_past": neighbor_agents_past[:, -21:],
-                "ego_current_state": np.array([0., 0., 1. ,0.], dtype=np.float32), # ego centric x, y, cos, sin
+                "ego_current_state": np.array([0., 0., 1. ,0., 0., 0., 0., 0., 0., 0.], dtype=np.float32), # ego centric x, y, cos, sin, vx, vy, ax, ay, steering angle, yaw rate, we only use x, y, cos, sin during inference
                 "static_objects": static_objects}
         data.update(vector_map)
         data = convert_to_model_inputs(data, device)
@@ -147,10 +147,10 @@ class DataProcessor(object):
             '''
             ego current
             '''
-            ego_agent_past, ego_current_state = calculate_additional_ego_states(ego_agent_past, time_stamps_past)
+            ego_current_state = calculate_additional_ego_states(ego_agent_past, time_stamps_past)
 
             # gather data
-            data = {"map_name": map_name, "token": token, "ego_agent_past": ego_agent_past, "ego_current_state": ego_current_state, "ego_agent_future": ego_agent_future,
+            data = {"map_name": map_name, "token": token, "ego_current_state": ego_current_state, "ego_agent_future": ego_agent_future,
                     "neighbor_agents_past": neighbor_agents_past, "neighbor_agents_future": neighbor_agents_future, "static_objects": static_objects}
             data.update(vector_map)
 
