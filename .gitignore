@@ -10,3 +10,4 @@ image*
 exp/
 cache/
 checkpoints/
+train_set/

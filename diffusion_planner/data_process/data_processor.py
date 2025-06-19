@@ -76,10 +76,11 @@ class DataProcessor(object):
 
         return data
     
-    # Use for data preprocess
-    def work(self, scenarios):
-
-        for scenario in tqdm(scenarios):
+    def process_single_scenario(self, scenario):
+        """
+        处理单个场景的方法，用于多进程调用
+        """
+        try:
             map_name = scenario._map_name
             token = scenario.token
             map_api = scenario.map_api        
@@ -154,7 +155,36 @@ class DataProcessor(object):
                     "neighbor_agents_past": neighbor_agents_past, "neighbor_agents_future": neighbor_agents_future, "static_objects": static_objects}
             data.update(vector_map)
 
-            self.save_to_disk(self._save_dir, data)
+            return data
+        except Exception as e:
+            print(f"处理场景 {scenario.token} 时出错: {str(e)}")
+            return None
+    
+    # Use for data preprocess
+    def work(self, scenarios):
+        """
+        原始的单进程数据处理方法，已添加详细进度显示
+        """
+        processed_count = 0
+        
+        # 使用tqdm显示进度
+        pbar = tqdm(scenarios, desc="处理场景", ncols=100)
+        
+        for i, scenario in enumerate(pbar):
+            result = self.process_single_scenario(scenario)
+            if result is not None:
+                self.save_to_disk(self._save_dir, result)
+                processed_count += 1
+            
+            # 更新进度条显示信息
+            pbar.set_postfix({
+                '已完成': processed_count,
+                '成功率': f"{processed_count/(i+1)*100:.1f}%",
+                '当前场景': scenario.token[:8]
+            })
+        
+        pbar.close()
+        print(f"✅ 单进程处理完成: {processed_count}/{len(scenarios)} 个场景成功处理")
 
     def save_to_disk(self, dir, data):
         np.savez(f"{dir}/{data['map_name']}_{data['token']}.npz", **data)
